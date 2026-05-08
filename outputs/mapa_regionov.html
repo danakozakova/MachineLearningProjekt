@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_efac0065ebe0e1759d480a046b01201b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    <div style="position:fixed; bottom:30px; left:30px; background:white; padding:10px; border:2px solid grey; border-radius:5px; z-index:9999; font-size:13px;"><b>Regióny</b><br><i style="background:red; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 0 (5 staníc)<br><i style="background:blue; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 1 (8 staníc)<br><i style="background:green; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 2 (8 staníc)<br><i style="background:purple; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 3 (2 staníc)<br><i style="background:orange; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 4 (17 staníc)<br><i style="background:darkred; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 5 (5 staníc)<br><i style="background:cadetblue; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 6 (2 staníc)<br><i style="background:gray; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 7 (1 staníc)<br><i style="background:darkblue; width:12px; height:12px; display:inline-block; border-radius:50%; margin-right:5px;"></i> Región 8 (1 staníc)<br></div>
+    
+            <div class="folium-map" id="map_efac0065ebe0e1759d480a046b01201b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_efac0065ebe0e1759d480a046b01201b = L.map(
+                "map_efac0065ebe0e1759d480a046b01201b",
+                {
+                    center: [-25.2744, 133.7751],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bb1781dd1ad65239f7b9fb3f0c2bf155 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_bb1781dd1ad65239f7b9fb3f0c2bf155.addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+            var circle_marker_52041ee6be3b807c067ff04a248c40cf = L.circleMarker(
+                [-27.44551578947368, 153.04950526315793],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_25163975e3f6c0dc44571bcde1a68bcd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6874cfd281a52bd0e81dbd20f6e7fb98 = $(`<div id="html_6874cfd281a52bd0e81dbd20f6e7fb98" style="width: 100.0%; height: 100.0%;">Brisbane (Región 0)</div>`)[0];
+                popup_25163975e3f6c0dc44571bcde1a68bcd.setContent(html_6874cfd281a52bd0e81dbd20f6e7fb98);
+            
+        
+
+        circle_marker_52041ee6be3b807c067ff04a248c40cf.bindPopup(popup_25163975e3f6c0dc44571bcde1a68bcd)
+        ;
+
+        
+    
+    
+            circle_marker_52041ee6be3b807c067ff04a248c40cf.bindTooltip(
+                `<div>
+                     Brisbane — Región 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6e8a4d912893e9f6a7528703c56edfda = L.circleMarker(
+                [-34.39423333333334, 150.88133333333334],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_31ed4c984943ee60cf06f7b84c2befa6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1aa0947ee7cc05b85fbf29f58376edf = $(`<div id="html_c1aa0947ee7cc05b85fbf29f58376edf" style="width: 100.0%; height: 100.0%;">Wollongong (Región 4)</div>`)[0];
+                popup_31ed4c984943ee60cf06f7b84c2befa6.setContent(html_c1aa0947ee7cc05b85fbf29f58376edf);
+            
+        
+
+        circle_marker_6e8a4d912893e9f6a7528703c56edfda.bindPopup(popup_31ed4c984943ee60cf06f7b84c2befa6)
+        ;
+
+        
+    
+    
+            circle_marker_6e8a4d912893e9f6a7528703c56edfda.bindTooltip(
+                `<div>
+                     Wollongong — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_04d0ed4ea1d18f640325288240575232 = L.circleMarker(
+                [-33.88283333333333, 150.73530000000002],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_2aed6a72a6cb1414a00c6187688eec16 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f66a586784d3239e6c86cbfb94da771c = $(`<div id="html_f66a586784d3239e6c86cbfb94da771c" style="width: 100.0%; height: 100.0%;">BadgerysCreek (Región 4)</div>`)[0];
+                popup_2aed6a72a6cb1414a00c6187688eec16.setContent(html_f66a586784d3239e6c86cbfb94da771c);
+            
+        
+
+        circle_marker_04d0ed4ea1d18f640325288240575232.bindPopup(popup_2aed6a72a6cb1414a00c6187688eec16)
+        ;
+
+        
+    
+    
+            circle_marker_04d0ed4ea1d18f640325288240575232.bindTooltip(
+                `<div>
+                     BadgerysCreek — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_81a80aa09593aabdb6a58e6ea69917fa = L.circleMarker(
+                [-16.89658888888889, 145.75196666666665],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_1a948d6bfc252bdbeb877dfe0e6dbadb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a646ae2018ed86f0235151e5220cbac6 = $(`<div id="html_a646ae2018ed86f0235151e5220cbac6" style="width: 100.0%; height: 100.0%;">Cairns (Región 6)</div>`)[0];
+                popup_1a948d6bfc252bdbeb877dfe0e6dbadb.setContent(html_a646ae2018ed86f0235151e5220cbac6);
+            
+        
+
+        circle_marker_81a80aa09593aabdb6a58e6ea69917fa.bindPopup(popup_1a948d6bfc252bdbeb877dfe0e6dbadb)
+        ;
+
+        
+    
+    
+            circle_marker_81a80aa09593aabdb6a58e6ea69917fa.bindTooltip(
+                `<div>
+                     Cairns — Región 6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0384c54aa8ca5b2c3475660cd3ceb470 = L.circleMarker(
+                [-33.85902307692307, 151.1109153846154],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_1b3abd47d0730aef0e4b4b446527e45d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17ad9413ad42ed139fcd2659d8dbbfb8 = $(`<div id="html_17ad9413ad42ed139fcd2659d8dbbfb8" style="width: 100.0%; height: 100.0%;">Sydney (Región 4)</div>`)[0];
+                popup_1b3abd47d0730aef0e4b4b446527e45d.setContent(html_17ad9413ad42ed139fcd2659d8dbbfb8);
+            
+        
+
+        circle_marker_0384c54aa8ca5b2c3475660cd3ceb470.bindPopup(popup_1b3abd47d0730aef0e4b4b446527e45d)
+        ;
+
+        
+    
+    
+            circle_marker_0384c54aa8ca5b2c3475660cd3ceb470.bindTooltip(
+                `<div>
+                     Sydney — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0bcbd429f62799899f351fd742fee317 = L.circleMarker(
+                [-31.511007692307693, 138.23143846153846],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_c7fcd318e15a09c6ff487696863a33b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a4ec9cbcd931978a5b427b0e6476ef2 = $(`<div id="html_5a4ec9cbcd931978a5b427b0e6476ef2" style="width: 100.0%; height: 100.0%;">Woomera (Región 5)</div>`)[0];
+                popup_c7fcd318e15a09c6ff487696863a33b9.setContent(html_5a4ec9cbcd931978a5b427b0e6476ef2);
+            
+        
+
+        circle_marker_0bcbd429f62799899f351fd742fee317.bindPopup(popup_c7fcd318e15a09c6ff487696863a33b9)
+        ;
+
+        
+    
+    
+            circle_marker_0bcbd429f62799899f351fd742fee317.bindTooltip(
+                `<div>
+                     Woomera — Región 5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bc3a6555c403f6795a109e438d388950 = L.circleMarker(
+                [-37.83607272727273, 144.85387272727272],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_3d6d027dc10107ceab74290f97f5e8f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_780e9d3703b3a898d62702b0d3dc3f0b = $(`<div id="html_780e9d3703b3a898d62702b0d3dc3f0b" style="width: 100.0%; height: 100.0%;">Melbourne (Región 1)</div>`)[0];
+                popup_3d6d027dc10107ceab74290f97f5e8f3.setContent(html_780e9d3703b3a898d62702b0d3dc3f0b);
+            
+        
+
+        circle_marker_bc3a6555c403f6795a109e438d388950.bindPopup(popup_3d6d027dc10107ceab74290f97f5e8f3)
+        ;
+
+        
+    
+    
+            circle_marker_bc3a6555c403f6795a109e438d388950.bindTooltip(
+                `<div>
+                     Melbourne — Región 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b7c206e0c8161a8af1435dd5ab5274ea = L.circleMarker(
+                [-32.965825, 128.2405],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_e04fab6f24bafa61b72022ee0e9ecd70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c316c5d4690ef63681cbe7a7fc1f760b = $(`<div id="html_c316c5d4690ef63681cbe7a7fc1f760b" style="width: 100.0%; height: 100.0%;">Dartmoor (Región 2)</div>`)[0];
+                popup_e04fab6f24bafa61b72022ee0e9ecd70.setContent(html_c316c5d4690ef63681cbe7a7fc1f760b);
+            
+        
+
+        circle_marker_b7c206e0c8161a8af1435dd5ab5274ea.bindPopup(popup_e04fab6f24bafa61b72022ee0e9ecd70)
+        ;
+
+        
+    
+    
+            circle_marker_b7c206e0c8161a8af1435dd5ab5274ea.bindTooltip(
+                `<div>
+                     Dartmoor — Región 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aff61cffdadaaf0603e7d2cc2d1997ff = L.circleMarker(
+                [-37.661722222222224, 144.80478888888888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_1c844935abf1e9b4c423d9f1ad9122d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c551aa03fadb6b020a4ff02727275f6 = $(`<div id="html_0c551aa03fadb6b020a4ff02727275f6" style="width: 100.0%; height: 100.0%;">MelbourneAirport (Región 1)</div>`)[0];
+                popup_1c844935abf1e9b4c423d9f1ad9122d5.setContent(html_0c551aa03fadb6b020a4ff02727275f6);
+            
+        
+
+        circle_marker_aff61cffdadaaf0603e7d2cc2d1997ff.bindPopup(popup_1c844935abf1e9b4c423d9f1ad9122d5)
+        ;
+
+        
+    
+    
+            circle_marker_aff61cffdadaaf0603e7d2cc2d1997ff.bindTooltip(
+                `<div>
+                     MelbourneAirport — Región 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d46148f69a3c2a1bd879e60f0b02f362 = L.circleMarker(
+                [-34.8121, 145.31805],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_574205feea54474f2c0af7d897ad20c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5ef96c47427cf90f89f50603981bd36 = $(`<div id="html_f5ef96c47427cf90f89f50603981bd36" style="width: 100.0%; height: 100.0%;">Albury (Región 4)</div>`)[0];
+                popup_574205feea54474f2c0af7d897ad20c6.setContent(html_f5ef96c47427cf90f89f50603981bd36);
+            
+        
+
+        circle_marker_d46148f69a3c2a1bd879e60f0b02f362.bindPopup(popup_574205feea54474f2c0af7d897ad20c6)
+        ;
+
+        
+    
+    
+            circle_marker_d46148f69a3c2a1bd879e60f0b02f362.bindTooltip(
+                `<div>
+                     Albury — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a4cef06f4e258960a4af679ae8b370e9 = L.circleMarker(
+                [-30.50583333333333, 121.70243333333332],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_b82e2dad66bc43679f39c24c3d1239c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09775ab89086e4109e902f1c493cebb9 = $(`<div id="html_09775ab89086e4109e902f1c493cebb9" style="width: 100.0%; height: 100.0%;">Albany (Región 2)</div>`)[0];
+                popup_b82e2dad66bc43679f39c24c3d1239c8.setContent(html_09775ab89086e4109e902f1c493cebb9);
+            
+        
+
+        circle_marker_a4cef06f4e258960a4af679ae8b370e9.bindPopup(popup_b82e2dad66bc43679f39c24c3d1239c8)
+        ;
+
+        
+    
+    
+            circle_marker_a4cef06f4e258960a4af679ae8b370e9.bindTooltip(
+                `<div>
+                     Albany — Región 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5f57ba566e62da38b8383c1d049a7540 = L.circleMarker(
+                [-30.148120000000002, 147.25426000000002],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_73b2d4f6b1d56f64eeb33be367969af3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_623329443b5f76d34c08380243b997a4 = $(`<div id="html_623329443b5f76d34c08380243b997a4" style="width: 100.0%; height: 100.0%;">Moree (Región 0)</div>`)[0];
+                popup_73b2d4f6b1d56f64eeb33be367969af3.setContent(html_623329443b5f76d34c08380243b997a4);
+            
+        
+
+        circle_marker_5f57ba566e62da38b8383c1d049a7540.bindPopup(popup_73b2d4f6b1d56f64eeb33be367969af3)
+        ;
+
+        
+    
+    
+            circle_marker_5f57ba566e62da38b8383c1d049a7540.bindTooltip(
+                `<div>
+                     Moree — Región 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7059c64b0ee1ada191675793d51b9397 = L.circleMarker(
+                [-23.727729999999998, 133.85848000000001],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_04506f9bc65833edfd6325208b319ea8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eeb36efae63e355d7611d46f9bf0be28 = $(`<div id="html_eeb36efae63e355d7611d46f9bf0be28" style="width: 100.0%; height: 100.0%;">AliceSprings (Región 8)</div>`)[0];
+                popup_04506f9bc65833edfd6325208b319ea8.setContent(html_eeb36efae63e355d7611d46f9bf0be28);
+            
+        
+
+        circle_marker_7059c64b0ee1ada191675793d51b9397.bindPopup(popup_04506f9bc65833edfd6325208b319ea8)
+        ;
+
+        
+    
+    
+            circle_marker_7059c64b0ee1ada191675793d51b9397.bindTooltip(
+                `<div>
+                     AliceSprings — Región 8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1aaaf620990f058efad45292bc05110b = L.circleMarker(
+                [-34.90594166666667, 146.90364166666663],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_1070be9e36a7a8892fb87e73b14137b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da96f7a17d8bbc1310dbf8f1c5d71549 = $(`<div id="html_da96f7a17d8bbc1310dbf8f1c5d71549" style="width: 100.0%; height: 100.0%;">Portland (Región 4)</div>`)[0];
+                popup_1070be9e36a7a8892fb87e73b14137b5.setContent(html_da96f7a17d8bbc1310dbf8f1c5d71549);
+            
+        
+
+        circle_marker_1aaaf620990f058efad45292bc05110b.bindPopup(popup_1070be9e36a7a8892fb87e73b14137b5)
+        ;
+
+        
+    
+    
+            circle_marker_1aaaf620990f058efad45292bc05110b.bindTooltip(
+                `<div>
+                     Portland — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ac4960bd84f7222d59fc75aa4ea86f3d = L.circleMarker(
+                [-31.6669, 116.0189],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_b48501fc181120ef8417a6a0e9268eb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2b229d0af3695e708d44d8914d6e975 = $(`<div id="html_c2b229d0af3695e708d44d8914d6e975" style="width: 100.0%; height: 100.0%;">PearceRAAF (Región 2)</div>`)[0];
+                popup_b48501fc181120ef8417a6a0e9268eb6.setContent(html_c2b229d0af3695e708d44d8914d6e975);
+            
+        
+
+        circle_marker_ac4960bd84f7222d59fc75aa4ea86f3d.bindPopup(popup_b48501fc181120ef8417a6a0e9268eb6)
+        ;
+
+        
+    
+    
+            circle_marker_ac4960bd84f7222d59fc75aa4ea86f3d.bindTooltip(
+                `<div>
+                     PearceRAAF — Región 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_59a72c21eca1e55bc34d4c327775982e = L.circleMarker(
+                [-42.88779, 147.39220999999998],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_d6d3f222ffd6bf6e2e049384a929dd4b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1930dcd5d8f900933a536c74d656eda = $(`<div id="html_e1930dcd5d8f900933a536c74d656eda" style="width: 100.0%; height: 100.0%;">Hobart (Región 1)</div>`)[0];
+                popup_d6d3f222ffd6bf6e2e049384a929dd4b.setContent(html_e1930dcd5d8f900933a536c74d656eda);
+            
+        
+
+        circle_marker_59a72c21eca1e55bc34d4c327775982e.bindPopup(popup_d6d3f222ffd6bf6e2e049384a929dd4b)
+        ;
+
+        
+    
+    
+            circle_marker_59a72c21eca1e55bc34d4c327775982e.bindTooltip(
+                `<div>
+                     Hobart — Región 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f414b7990c7cab0fe679d16956f475a8 = L.circleMarker(
+                [-36.69195, 142.98230000000004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_6d65397ff3bf42ba76b6672a6da9bb15 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d6d0c7a68f1f84c2526930e7fc25569 = $(`<div id="html_2d6d0c7a68f1f84c2526930e7fc25569" style="width: 100.0%; height: 100.0%;">Nhil (Región 1)</div>`)[0];
+                popup_6d65397ff3bf42ba76b6672a6da9bb15.setContent(html_2d6d0c7a68f1f84c2526930e7fc25569);
+            
+        
+
+        circle_marker_f414b7990c7cab0fe679d16956f475a8.bindPopup(popup_6d65397ff3bf42ba76b6672a6da9bb15)
+        ;
+
+        
+    
+    
+            circle_marker_f414b7990c7cab0fe679d16956f475a8.bindTooltip(
+                `<div>
+                     Nhil — Región 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7784644c1e97baeff745090011a416c5 = L.circleMarker(
+                [-37.7, 145.0833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_3588da76a1e0d3eabc9c9b57f9ac8b7f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2dbd8ffeee051e0dee718757409bcb2b = $(`<div id="html_2dbd8ffeee051e0dee718757409bcb2b" style="width: 100.0%; height: 100.0%;">Watsonia (Región 1)</div>`)[0];
+                popup_3588da76a1e0d3eabc9c9b57f9ac8b7f.setContent(html_2dbd8ffeee051e0dee718757409bcb2b);
+            
+        
+
+        circle_marker_7784644c1e97baeff745090011a416c5.bindPopup(popup_3588da76a1e0d3eabc9c9b57f9ac8b7f)
+        ;
+
+        
+    
+    
+            circle_marker_7784644c1e97baeff745090011a416c5.bindTooltip(
+                `<div>
+                     Watsonia — Región 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2aadc9c0b50eed47488b854eb0b99657 = L.circleMarker(
+                [-19.338284615384616, 146.68359230769232],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_ca90841f750041603e2af1d578e44e43 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb30a4da64880a0cedf383f18c02d0d4 = $(`<div id="html_bb30a4da64880a0cedf383f18c02d0d4" style="width: 100.0%; height: 100.0%;">Townsville (Región 6)</div>`)[0];
+                popup_ca90841f750041603e2af1d578e44e43.setContent(html_bb30a4da64880a0cedf383f18c02d0d4);
+            
+        
+
+        circle_marker_2aadc9c0b50eed47488b854eb0b99657.bindPopup(popup_ca90841f750041603e2af1d578e44e43)
+        ;
+
+        
+    
+    
+            circle_marker_2aadc9c0b50eed47488b854eb0b99657.bindTooltip(
+                `<div>
+                     Townsville — Región 6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ae855a3e7e127de0670ddcbcc960e825 = L.circleMarker(
+                [-32.99073333333333, 121.5674],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_883e5346a0706ab001817f6ddc0738e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67caa924487844bb7e9ba8c7e6466e12 = $(`<div id="html_67caa924487844bb7e9ba8c7e6466e12" style="width: 100.0%; height: 100.0%;">SalmonGums (Región 2)</div>`)[0];
+                popup_883e5346a0706ab001817f6ddc0738e4.setContent(html_67caa924487844bb7e9ba8c7e6466e12);
+            
+        
+
+        circle_marker_ae855a3e7e127de0670ddcbcc960e825.bindPopup(popup_883e5346a0706ab001817f6ddc0738e4)
+        ;
+
+        
+    
+    
+            circle_marker_ae855a3e7e127de0670ddcbcc960e825.bindTooltip(
+                `<div>
+                     SalmonGums — Región 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_02b4f434d09fc8b95e3f0822f397f9ff = L.circleMarker(
+                [-35.4184, 149.0937],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_0759ca87a6dadcab8e4c6a3adae90cdc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f8abff8aaa1098f1247a195943fa718 = $(`<div id="html_9f8abff8aaa1098f1247a195943fa718" style="width: 100.0%; height: 100.0%;">Tuggeranong (Región 4)</div>`)[0];
+                popup_0759ca87a6dadcab8e4c6a3adae90cdc.setContent(html_9f8abff8aaa1098f1247a195943fa718);
+            
+        
+
+        circle_marker_02b4f434d09fc8b95e3f0822f397f9ff.bindPopup(popup_0759ca87a6dadcab8e4c6a3adae90cdc)
+        ;
+
+        
+    
+    
+            circle_marker_02b4f434d09fc8b95e3f0822f397f9ff.bindTooltip(
+                `<div>
+                     Tuggeranong — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dd9e4dae20b66e843c96a1614e228a4a = L.circleMarker(
+                [-35.299745454545466, 149.11319090909092],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_a6d79af328eb269f1b910c8a71d1a188 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3271be80eb812cd5fff10698effc75a0 = $(`<div id="html_3271be80eb812cd5fff10698effc75a0" style="width: 100.0%; height: 100.0%;">Canberra (Región 4)</div>`)[0];
+                popup_a6d79af328eb269f1b910c8a71d1a188.setContent(html_3271be80eb812cd5fff10698effc75a0);
+            
+        
+
+        circle_marker_dd9e4dae20b66e843c96a1614e228a4a.bindPopup(popup_a6d79af328eb269f1b910c8a71d1a188)
+        ;
+
+        
+    
+    
+            circle_marker_dd9e4dae20b66e843c96a1614e228a4a.bindTooltip(
+                `<div>
+                     Canberra — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1a3b768884ec31b6376c7bbb1c618a8d = L.circleMarker(
+                [-37.79914, 140.7718],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_bc54c3d28790d1b7145ec99f455a0bb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2056cf9774bf390940eb12eea9985437 = $(`<div id="html_2056cf9774bf390940eb12eea9985437" style="width: 100.0%; height: 100.0%;">MountGambier (Región 1)</div>`)[0];
+                popup_bc54c3d28790d1b7145ec99f455a0bb6.setContent(html_2056cf9774bf390940eb12eea9985437);
+            
+        
+
+        circle_marker_1a3b768884ec31b6376c7bbb1c618a8d.bindPopup(popup_bc54c3d28790d1b7145ec99f455a0bb6)
+        ;
+
+        
+    
+    
+            circle_marker_1a3b768884ec31b6376c7bbb1c618a8d.bindTooltip(
+                `<div>
+                     MountGambier — Región 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4fc05ec68f0162e808a44c46d542f7d8 = L.circleMarker(
+                [-35.71061111111111, 147.8693888888889],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_129feb8203d6fcbb79871cc0ea9947c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f656e4a168d81b13113073e27330410d = $(`<div id="html_f656e4a168d81b13113073e27330410d" style="width: 100.0%; height: 100.0%;">Sale (Región 4)</div>`)[0];
+                popup_129feb8203d6fcbb79871cc0ea9947c2.setContent(html_f656e4a168d81b13113073e27330410d);
+            
+        
+
+        circle_marker_4fc05ec68f0162e808a44c46d542f7d8.bindPopup(popup_129feb8203d6fcbb79871cc0ea9947c2)
+        ;
+
+        
+    
+    
+            circle_marker_4fc05ec68f0162e808a44c46d542f7d8.bindTooltip(
+                `<div>
+                     Sale — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_70e8d3adaeb0de18646e056f98a1cd81 = L.circleMarker(
+                [-34.47506, 138.9991],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_aedc3640640ad625c53db940fffbd070 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_074c2442bf61f99948b93b3eec6062e5 = $(`<div id="html_074c2442bf61f99948b93b3eec6062e5" style="width: 100.0%; height: 100.0%;">Nuriootpa (Región 5)</div>`)[0];
+                popup_aedc3640640ad625c53db940fffbd070.setContent(html_074c2442bf61f99948b93b3eec6062e5);
+            
+        
+
+        circle_marker_70e8d3adaeb0de18646e056f98a1cd81.bindPopup(popup_aedc3640640ad625c53db940fffbd070)
+        ;
+
+        
+    
+    
+            circle_marker_70e8d3adaeb0de18646e056f98a1cd81.bindTooltip(
+                `<div>
+                     Nuriootpa — Región 5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b7fe67334075ecd7f9f8796922d55754 = L.circleMarker(
+                [-37.54095, 143.83433333333332],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_6ea4901cb6b2323ddd024f8873cb7851 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_698876a525a2a085ea2fd9dbcfdf1d57 = $(`<div id="html_698876a525a2a085ea2fd9dbcfdf1d57" style="width: 100.0%; height: 100.0%;">Ballarat (Región 1)</div>`)[0];
+                popup_6ea4901cb6b2323ddd024f8873cb7851.setContent(html_698876a525a2a085ea2fd9dbcfdf1d57);
+            
+        
+
+        circle_marker_b7fe67334075ecd7f9f8796922d55754.bindPopup(popup_6ea4901cb6b2323ddd024f8873cb7851)
+        ;
+
+        
+    
+    
+            circle_marker_b7fe67334075ecd7f9f8796922d55754.bindTooltip(
+                `<div>
+                     Ballarat — Región 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ce08db021638aa9ecc7fe3e497506118 = L.circleMarker(
+                [-33.2814, 151.5763],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_8ddb0a20839d09044a70476ef933235f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_876acef63c10ce11aed7d06cf3b84fe4 = $(`<div id="html_876acef63c10ce11aed7d06cf3b84fe4" style="width: 100.0%; height: 100.0%;">NorahHead (Región 4)</div>`)[0];
+                popup_8ddb0a20839d09044a70476ef933235f.setContent(html_876acef63c10ce11aed7d06cf3b84fe4);
+            
+        
+
+        circle_marker_ce08db021638aa9ecc7fe3e497506118.bindPopup(popup_8ddb0a20839d09044a70476ef933235f)
+        ;
+
+        
+    
+    
+            circle_marker_ce08db021638aa9ecc7fe3e497506118.bindTooltip(
+                `<div>
+                     NorahHead — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_09bd0ae8f37799db6d8b5aa99c088199 = L.circleMarker(
+                [-41.46160833333333, 147.16270833333334],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_b71b0970d6f7fa5e00fd5ebf932585c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac377cea353566545f034c7c8c89f562 = $(`<div id="html_ac377cea353566545f034c7c8c89f562" style="width: 100.0%; height: 100.0%;">Launceston (Región 1)</div>`)[0];
+                popup_b71b0970d6f7fa5e00fd5ebf932585c2.setContent(html_ac377cea353566545f034c7c8c89f562);
+            
+        
+
+        circle_marker_09bd0ae8f37799db6d8b5aa99c088199.bindPopup(popup_b71b0970d6f7fa5e00fd5ebf932585c2)
+        ;
+
+        
+    
+    
+            circle_marker_09bd0ae8f37799db6d8b5aa99c088199.bindTooltip(
+                `<div>
+                     Launceston — Región 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5102c77e0f309cdc05bd5837d17fb981 = L.circleMarker(
+                [-28.468857142857143, 146.5418714285714],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_cf1018839ae7e583635e936f20c503c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5bb2ce0790448c9dc43f101b7c09233 = $(`<div id="html_c5bb2ce0790448c9dc43f101b7c09233" style="width: 100.0%; height: 100.0%;">Newcastle (Región 0)</div>`)[0];
+                popup_cf1018839ae7e583635e936f20c503c7.setContent(html_c5bb2ce0790448c9dc43f101b7c09233);
+            
+        
+
+        circle_marker_5102c77e0f309cdc05bd5837d17fb981.bindPopup(popup_cf1018839ae7e583635e936f20c503c7)
+        ;
+
+        
+    
+    
+            circle_marker_5102c77e0f309cdc05bd5837d17fb981.bindTooltip(
+                `<div>
+                     Newcastle — Región 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_945bb1b6de5c1df08d3c21645dd52c85 = L.circleMarker(
+                [-33.7496, 150.6905],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_77f17b78622161fe9b407a6ca9612a31 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_350a7ca4b37cfc3d582927bf3a326cdb = $(`<div id="html_350a7ca4b37cfc3d582927bf3a326cdb" style="width: 100.0%; height: 100.0%;">Penrith (Región 4)</div>`)[0];
+                popup_77f17b78622161fe9b407a6ca9612a31.setContent(html_350a7ca4b37cfc3d582927bf3a326cdb);
+            
+        
+
+        circle_marker_945bb1b6de5c1df08d3c21645dd52c85.bindPopup(popup_77f17b78622161fe9b407a6ca9612a31)
+        ;
+
+        
+    
+    
+            circle_marker_945bb1b6de5c1df08d3c21645dd52c85.bindTooltip(
+                `<div>
+                     Penrith — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_85c751093eac51c3653bba624ba9c310 = L.circleMarker(
+                [-34.93775, 116.7232],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_68cc312530de6eef9c193bf6864cc776 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4cfd44733dd84098a725cc546a6a5a9f = $(`<div id="html_4cfd44733dd84098a725cc546a6a5a9f" style="width: 100.0%; height: 100.0%;">Walpole (Región 2)</div>`)[0];
+                popup_68cc312530de6eef9c193bf6864cc776.setContent(html_4cfd44733dd84098a725cc546a6a5a9f);
+            
+        
+
+        circle_marker_85c751093eac51c3653bba624ba9c310.bindPopup(popup_68cc312530de6eef9c193bf6864cc776)
+        ;
+
+        
+    
+    
+            circle_marker_85c751093eac51c3653bba624ba9c310.bindTooltip(
+                `<div>
+                     Walpole — Región 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_14d06fda42f70d87431e573596c71595 = L.circleMarker(
+                [-35.882000000000005, 146.134775],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_956c22a079eaf929653a2dee40398534 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cee01fbc77022f0c73a2edf7d4fd2d5a = $(`<div id="html_cee01fbc77022f0c73a2edf7d4fd2d5a" style="width: 100.0%; height: 100.0%;">Bendigo (Región 4)</div>`)[0];
+                popup_956c22a079eaf929653a2dee40398534.setContent(html_cee01fbc77022f0c73a2edf7d4fd2d5a);
+            
+        
+
+        circle_marker_14d06fda42f70d87431e573596c71595.bindPopup(popup_956c22a079eaf929653a2dee40398534)
+        ;
+
+        
+    
+    
+            circle_marker_14d06fda42f70d87431e573596c71595.bindTooltip(
+                `<div>
+                     Bendigo — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b6db78a163a2e76fe54100734fc5f16c = L.circleMarker(
+                [-31.71935862068965, 137.7686],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_710ee14e97995d4640369356f643cfa4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_618c25a89357b5f64a700dab097c2428 = $(`<div id="html_618c25a89357b5f64a700dab097c2428" style="width: 100.0%; height: 100.0%;">Adelaide (Región 5)</div>`)[0];
+                popup_710ee14e97995d4640369356f643cfa4.setContent(html_618c25a89357b5f64a700dab097c2428);
+            
+        
+
+        circle_marker_b6db78a163a2e76fe54100734fc5f16c.bindPopup(popup_710ee14e97995d4640369356f643cfa4)
+        ;
+
+        
+    
+    
+            circle_marker_b6db78a163a2e76fe54100734fc5f16c.bindTooltip(
+                `<div>
+                     Adelaide — Región 5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a54daeee1ca9177e4db1d2e2d7c4c003 = L.circleMarker(
+                [-33.91815714285715, 150.97602857142857],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_82cb4b3aa8712210b4ecd3441dbd406e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6171d91682fbc47d0ac101312bb4c5d8 = $(`<div id="html_6171d91682fbc47d0ac101312bb4c5d8" style="width: 100.0%; height: 100.0%;">SydneyAirport (Región 4)</div>`)[0];
+                popup_82cb4b3aa8712210b4ecd3441dbd406e.setContent(html_6171d91682fbc47d0ac101312bb4c5d8);
+            
+        
+
+        circle_marker_a54daeee1ca9177e4db1d2e2d7c4c003.bindPopup(popup_82cb4b3aa8712210b4ecd3441dbd406e)
+        ;
+
+        
+    
+    
+            circle_marker_a54daeee1ca9177e4db1d2e2d7c4c003.bindTooltip(
+                `<div>
+                     SydneyAirport — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb4ff6305bdac0df1fcf04ff3bae6e68 = L.circleMarker(
+                [-35.5293, 148.7721],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_14788cce91e8adb2e832c04a5c2d4e2f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ea91e6ef99f6688731fc24e37395dcb = $(`<div id="html_6ea91e6ef99f6688731fc24e37395dcb" style="width: 100.0%; height: 100.0%;">MountGinini (Región 4)</div>`)[0];
+                popup_14788cce91e8adb2e832c04a5c2d4e2f.setContent(html_6ea91e6ef99f6688731fc24e37395dcb);
+            
+        
+
+        circle_marker_bb4ff6305bdac0df1fcf04ff3bae6e68.bindPopup(popup_14788cce91e8adb2e832c04a5c2d4e2f)
+        ;
+
+        
+    
+    
+            circle_marker_bb4ff6305bdac0df1fcf04ff3bae6e68.bindTooltip(
+                `<div>
+                     MountGinini — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_61ece37eda7224f927dacb85c36dbfa9 = L.circleMarker(
+                [-34.02695, 115.08395],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_806c9ffb6d02e3c6d4799ed1311253b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23d62b3605d7ef15273dfd8555dae6e2 = $(`<div id="html_23d62b3605d7ef15273dfd8555dae6e2" style="width: 100.0%; height: 100.0%;">Witchcliffe (Región 2)</div>`)[0];
+                popup_806c9ffb6d02e3c6d4799ed1311253b1.setContent(html_23d62b3605d7ef15273dfd8555dae6e2);
+            
+        
+
+        circle_marker_61ece37eda7224f927dacb85c36dbfa9.bindPopup(popup_806c9ffb6d02e3c6d4799ed1311253b1)
+        ;
+
+        
+    
+    
+            circle_marker_61ece37eda7224f927dacb85c36dbfa9.bindTooltip(
+                `<div>
+                     Witchcliffe — Región 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d81e918e24b993461d5597a257cc3e18 = L.circleMarker(
+                [-33.19209411764706, 121.5527588235294],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_2b8135b4108e008fdff7a92745a21110 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0443167e1367af82af82ff137f5c147 = $(`<div id="html_b0443167e1367af82af82ff137f5c147" style="width: 100.0%; height: 100.0%;">Perth (Región 2)</div>`)[0];
+                popup_2b8135b4108e008fdff7a92745a21110.setContent(html_b0443167e1367af82af82ff137f5c147);
+            
+        
+
+        circle_marker_d81e918e24b993461d5597a257cc3e18.bindPopup(popup_2b8135b4108e008fdff7a92745a21110)
+        ;
+
+        
+    
+    
+            circle_marker_d81e918e24b993461d5597a257cc3e18.bindTooltip(
+                `<div>
+                     Perth — Región 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_32eb1c55727f9579663afd8d07f25be5 = L.circleMarker(
+                [-31.93, 115.973225],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_be8877d82e16800a575e39b0e2495b97 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3bd84e847abd95436f32eba05fc3595 = $(`<div id="html_e3bd84e847abd95436f32eba05fc3595" style="width: 100.0%; height: 100.0%;">PerthAirport (Región 2)</div>`)[0];
+                popup_be8877d82e16800a575e39b0e2495b97.setContent(html_e3bd84e847abd95436f32eba05fc3595);
+            
+        
+
+        circle_marker_32eb1c55727f9579663afd8d07f25be5.bindPopup(popup_be8877d82e16800a575e39b0e2495b97)
+        ;
+
+        
+    
+    
+            circle_marker_32eb1c55727f9579663afd8d07f25be5.bindTooltip(
+                `<div>
+                     PerthAirport — Región 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_23b25a5a5ed999f41fe7590143d474e1 = L.circleMarker(
+                [-32.78392, 151.87574],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_d1b12f8eb5fd6947224582dc8d60d357 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88d86841d453aac6d335c83bc5985faa = $(`<div id="html_88d86841d453aac6d335c83bc5985faa" style="width: 100.0%; height: 100.0%;">Williamtown (Región 4)</div>`)[0];
+                popup_d1b12f8eb5fd6947224582dc8d60d357.setContent(html_88d86841d453aac6d335c83bc5985faa);
+            
+        
+
+        circle_marker_23b25a5a5ed999f41fe7590143d474e1.bindPopup(popup_d1b12f8eb5fd6947224582dc8d60d357)
+        ;
+
+        
+    
+    
+            circle_marker_23b25a5a5ed999f41fe7590143d474e1.bindTooltip(
+                `<div>
+                     Williamtown — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_232d37e19e7da371db9e424bae01ed00 = L.circleMarker(
+                [-32.42059655172414, 148.57246896551723],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_cc4b1b09fc8531217a85b8d023d53d61 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30c8f25f925f3bdc1f2b592422c88e0a = $(`<div id="html_30c8f25f925f3bdc1f2b592422c88e0a" style="width: 100.0%; height: 100.0%;">Richmond (Región 4)</div>`)[0];
+                popup_cc4b1b09fc8531217a85b8d023d53d61.setContent(html_30c8f25f925f3bdc1f2b592422c88e0a);
+            
+        
+
+        circle_marker_232d37e19e7da371db9e424bae01ed00.bindPopup(popup_cc4b1b09fc8531217a85b8d023d53d61)
+        ;
+
+        
+    
+    
+            circle_marker_232d37e19e7da371db9e424bae01ed00.bindTooltip(
+                `<div>
+                     Richmond — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ab92d336890820ceef2da80b0141fd9f = L.circleMarker(
+                [-27.938850000000002, 153.43045],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_8d333cd214f474298392c644b5e805dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e412d39ff82e8bfe076b13acb5ff02a = $(`<div id="html_5e412d39ff82e8bfe076b13acb5ff02a" style="width: 100.0%; height: 100.0%;">GoldCoast (Región 0)</div>`)[0];
+                popup_8d333cd214f474298392c644b5e805dc.setContent(html_5e412d39ff82e8bfe076b13acb5ff02a);
+            
+        
+
+        circle_marker_ab92d336890820ceef2da80b0141fd9f.bindPopup(popup_8d333cd214f474298392c644b5e805dc)
+        ;
+
+        
+    
+    
+            circle_marker_ab92d336890820ceef2da80b0141fd9f.bindTooltip(
+                `<div>
+                     GoldCoast — Región 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f450caae0867e7a6e7fab3f4a2d3b37a = L.circleMarker(
+                [-34.219080000000005, 142.04284],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_2916384ff22edf72554069649b778315 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5820589b1ea70c5c6c124d1cf5e35a57 = $(`<div id="html_5820589b1ea70c5c6c124d1cf5e35a57" style="width: 100.0%; height: 100.0%;">Mildura (Región 5)</div>`)[0];
+                popup_2916384ff22edf72554069649b778315.setContent(html_5820589b1ea70c5c6c124d1cf5e35a57);
+            
+        
+
+        circle_marker_f450caae0867e7a6e7fab3f4a2d3b37a.bindPopup(popup_2916384ff22edf72554069649b778315)
+        ;
+
+        
+    
+    
+            circle_marker_f450caae0867e7a6e7fab3f4a2d3b37a.bindTooltip(
+                `<div>
+                     Mildura — Región 5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6f220d8452b602a62513179569c219d4 = L.circleMarker(
+                [-30.30725, 153.112975],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_e150b999190da2cb1d24a24a7fb6f0d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_12d8e4785094f88ec8a06b9661773b3d = $(`<div id="html_12d8e4785094f88ec8a06b9661773b3d" style="width: 100.0%; height: 100.0%;">CoffsHarbour (Región 0)</div>`)[0];
+                popup_e150b999190da2cb1d24a24a7fb6f0d0.setContent(html_12d8e4785094f88ec8a06b9661773b3d);
+            
+        
+
+        circle_marker_6f220d8452b602a62513179569c219d4.bindPopup(popup_e150b999190da2cb1d24a24a7fb6f0d0)
+        ;
+
+        
+    
+    
+            circle_marker_6f220d8452b602a62513179569c219d4.bindTooltip(
+                `<div>
+                     CoffsHarbour — Región 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_04797dd13d0d9fa3ae062d6ac5454a9e = L.circleMarker(
+                [-29.04845, 167.95298333333335],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_5ac30b7d0a43309289515eae2292ad7d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e1155340251b78b77d1b6578fa8c126 = $(`<div id="html_5e1155340251b78b77d1b6578fa8c126" style="width: 100.0%; height: 100.0%;">NorfolkIsland (Región 7)</div>`)[0];
+                popup_5ac30b7d0a43309289515eae2292ad7d.setContent(html_5e1155340251b78b77d1b6578fa8c126);
+            
+        
+
+        circle_marker_04797dd13d0d9fa3ae062d6ac5454a9e.bindPopup(popup_5ac30b7d0a43309289515eae2292ad7d)
+        ;
+
+        
+    
+    
+            circle_marker_04797dd13d0d9fa3ae062d6ac5454a9e.bindTooltip(
+                `<div>
+                     NorfolkIsland — Región 7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b3e6c16d408a7a539c9de1adb6c465e4 = L.circleMarker(
+                [-32.119099999999996, 146.3359923076923],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_209c47fe39465ee78cab7ec58361321e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20f2b5293cc6ad3651fe68087e0153f6 = $(`<div id="html_20f2b5293cc6ad3651fe68087e0153f6" style="width: 100.0%; height: 100.0%;">Cobar (Región 4)</div>`)[0];
+                popup_209c47fe39465ee78cab7ec58361321e.setContent(html_20f2b5293cc6ad3651fe68087e0153f6);
+            
+        
+
+        circle_marker_b3e6c16d408a7a539c9de1adb6c465e4.bindPopup(popup_209c47fe39465ee78cab7ec58361321e)
+        ;
+
+        
+    
+    
+            circle_marker_b3e6c16d408a7a539c9de1adb6c465e4.bindTooltip(
+                `<div>
+                     Cobar — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6080b1a523fc96f1d7d0673547f971ca = L.circleMarker(
+                [-12.460879310344827, 130.8878],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_e9d841dd985e54f6076a31c1ea94c33b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_60ad70923fb419d9d6204a523e209de0 = $(`<div id="html_60ad70923fb419d9d6204a523e209de0" style="width: 100.0%; height: 100.0%;">Darwin (Región 3)</div>`)[0];
+                popup_e9d841dd985e54f6076a31c1ea94c33b.setContent(html_60ad70923fb419d9d6204a523e209de0);
+            
+        
+
+        circle_marker_6080b1a523fc96f1d7d0673547f971ca.bindPopup(popup_e9d841dd985e54f6076a31c1ea94c33b)
+        ;
+
+        
+    
+    
+            circle_marker_6080b1a523fc96f1d7d0673547f971ca.bindTooltip(
+                `<div>
+                     Darwin — Región 3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b3283301a177d0b2a002031ed5e40420 = L.circleMarker(
+                [-14.460700000000001, 132.25382727272725],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_b3aecb5e1fd0b3986e24059415cf5942 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f74a7c02ca9ed99a4f9fc2b81897d4d = $(`<div id="html_2f74a7c02ca9ed99a4f9fc2b81897d4d" style="width: 100.0%; height: 100.0%;">Katherine (Región 3)</div>`)[0];
+                popup_b3aecb5e1fd0b3986e24059415cf5942.setContent(html_2f74a7c02ca9ed99a4f9fc2b81897d4d);
+            
+        
+
+        circle_marker_b3283301a177d0b2a002031ed5e40420.bindPopup(popup_b3aecb5e1fd0b3986e24059415cf5942)
+        ;
+
+        
+    
+    
+            circle_marker_b3283301a177d0b2a002031ed5e40420.bindTooltip(
+                `<div>
+                     Katherine — Región 3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_979144b54c4c8268483686952b88eba9 = L.circleMarker(
+                [-30.67956666666667, 139.27273333333332],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_2b3efa9ec53819f3dbe67f47adc8c9fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39f3c362a201303906bbcee19e352bd7 = $(`<div id="html_39f3c362a201303906bbcee19e352bd7" style="width: 100.0%; height: 100.0%;">Uluru (Región 5)</div>`)[0];
+                popup_2b3efa9ec53819f3dbe67f47adc8c9fb.setContent(html_39f3c362a201303906bbcee19e352bd7);
+            
+        
+
+        circle_marker_979144b54c4c8268483686952b88eba9.bindPopup(popup_2b3efa9ec53819f3dbe67f47adc8c9fb)
+        ;
+
+        
+    
+    
+            circle_marker_979144b54c4c8268483686952b88eba9.bindTooltip(
+                `<div>
+                     Uluru — Región 5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_adfd6103268aaddfec2c6b5e1c9749bb = L.circleMarker(
+                [-34.39731111111111, 143.94376666666665],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_efac0065ebe0e1759d480a046b01201b);
+        
+    
+        var popup_c37e3fc7ce0542c43d3df85328d120f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78a97922023f0f57db985a6b661922b8 = $(`<div id="html_78a97922023f0f57db985a6b661922b8" style="width: 100.0%; height: 100.0%;">WaggaWagga (Región 4)</div>`)[0];
+                popup_c37e3fc7ce0542c43d3df85328d120f4.setContent(html_78a97922023f0f57db985a6b661922b8);
+            
+        
+
+        circle_marker_adfd6103268aaddfec2c6b5e1c9749bb.bindPopup(popup_c37e3fc7ce0542c43d3df85328d120f4)
+        ;
+
+        
+    
+    
+            circle_marker_adfd6103268aaddfec2c6b5e1c9749bb.bindTooltip(
+                `<div>
+                     WaggaWagga — Región 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
