@@ -25,6 +25,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 desktop.ini
+.git/
+*.html
 MANIFEST
 
 # PyInstaller
@@ -81,6 +83,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+archived/
 
 # IPython
 profile_default/
