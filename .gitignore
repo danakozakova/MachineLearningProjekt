@@ -30,6 +30,8 @@ desktop.ini
 MANIFEST
 IB031_project_FINAL.ipynb
 REPORT_FINAL.md
+data/australia_weather_imputed.csv
+data/australia_weather_transformed.csv
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
