@@ -33,6 +33,8 @@ MANIFEST
 *_FINAL.html
 data/australia_weather_imputed.csv
 data/australia_weather_transformed.csv
+baselineNN_diagram.png
+embNN_diagram.png
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
