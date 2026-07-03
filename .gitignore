@@ -28,6 +28,8 @@ desktop.ini
 .git/
 *.html
 MANIFEST
+IB031_project_FINAL.ipynb
+REPORT_FINAL.md
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
