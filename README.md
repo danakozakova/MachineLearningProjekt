@@ -1,8 +1,8 @@
 # Predikcia dažďa v Austrálii 🌧️
 
-Strojové učenie na predikciu zrážok z denných meteorologických pozorovaní – **klasifikácia** (bude zajtra pršať?) aj **regresia** (koľko naprší). Projekt pokrýva celý pipeline od exploračnej analýzy cez imputáciu chýbajúcich dát a feature engineering až po tréning a porovnanie modelov.
+Strojové učenie na predikciu zrážok z denných meteorologických pozorovaní – **klasifikácia** (bude zajtra pršať?) aj **regresia** (koľko naprší). Projekt pokrýva celý pipeline od exploračnej analýzy cez imputáciu chýbajúcich dát a feature engineering až po tréning a porovnanie modelov. [REPORT.md](REPORT_rain_prediction_australia_project.md)
 
-> 🇬🇧 *End-to-end ML project on Australian daily weather data: predicting next-day rain (classification) and rainfall amount (regression). Covers EDA, region-aware missing-data imputation, feature engineering, and model comparison with time-series cross-validation. Write-up is in Slovak — see [REPORT.md](REPORT.md).*
+> 🇬🇧 *End-to-end ML project on Australian daily weather data: predicting next-day rain (classification) and rainfall amount (regression). Covers EDA, region-aware missing-data imputation, feature engineering, and model comparison with time-series cross-validation. Write-up is in Slovak — see [REPORT.md](REPORT_rain_prediction_australia_project.md).*
 
 ## Výsledky v skratke
 
