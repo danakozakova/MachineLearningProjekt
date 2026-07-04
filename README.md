@@ -1,8 +1,8 @@
 # Predikcia dažďa v Austrálii 🌧️
 
-Strojové učenie na predikciu zrážok z denných meteorologických pozorovaní – **klasifikácia** (bude zajtra pršať?) aj **regresia** (koľko naprší). Projekt pokrýva celý pipeline od exploračnej analýzy cez imputáciu chýbajúcich dát a feature engineering až po tréning a porovnanie modelov. [REPORT.md](REPORT_rain_prediction_australia_project.md)
+Strojové učenie na predikciu zrážok z denných meteorologických pozorovaní – **klasifikácia** (bude zajtra pršať?) aj **regresia** (koľko naprší). Projekt pokrýva celý pipeline od exploračnej analýzy cez imputáciu chýbajúcich dát a feature engineering až po tréning a porovnanie modelov.
 
-> 🇬🇧 *End-to-end ML project on Australian daily weather data: predicting next-day rain (classification) and rainfall amount (regression). Covers EDA, region-aware missing-data imputation, feature engineering, and model comparison with time-series cross-validation. Write-up is in Slovak — see [REPORT.md](REPORT_rain_prediction_australia_project.md).*
+> 🇬🇧 *End-to-end ML project on Australian daily weather data: predicting next-day rain (classification) and rainfall amount (regression). Covers EDA, region-aware missing-data imputation, feature engineering, and model comparison with time-series cross-validation. Write-up is in Slovak..*
 
 ## Výsledky v skratke
 
@@ -32,7 +32,7 @@ pred záchytom menšinovej triedy. Riešiteľné cez `class_weight='balanced'` a
 - **Feature engineering** – cyklické sin/cos kódovanie smerov vetra, zmeny veličín počas dňa, logaritmické transformácie skosených premenných, časové príznaky.
 - **Modelovanie** – 4 feature sety × viac modelov, poctivá **TimeSeriesSplit** validácia (dáta majú časovú štruktúru, náhodné rozdelenie by spôsobilo leakage).
 
-Podrobné zhrnutie s grafmi je v **[REPORT.md](REPORT.md)**.
+Podrobné zhrnutie s grafmi je v **[REPORT.md](REPORT_rain_prediction_australia_project.md)**.
 
 ## Dáta
 
